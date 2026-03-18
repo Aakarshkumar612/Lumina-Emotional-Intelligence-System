@@ -15,7 +15,7 @@ venv/
 *.env
 
 # Artifacts (large model files — don't push to GitHub)
-artifacts/
+# artifacts/ ← keeping models in repo for deployment
 
 # Data (optional — uncomment if you don't want data on GitHub)
 # data/
