@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 18% 10%;
+    --card-foreground: 210 40% 98%;
+    --card-elevated: 240 18% 13%;
+
+    --popover: 240 18% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 187 86% 43%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 12% 15%;
+    --muted-foreground: 215 16% 62%;
+
+    --accent: 240 12% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 160 64% 42%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 240 20% 4%;
+
+    --border: 240 14% 15%;
+    --input: 240 14% 15%;
+    --ring: 263 70% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 18% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 263 70% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 263 70% 58%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 14% 15%;
+    --sidebar-ring: 263 70% 58%;
+
+    --text-subtle: 215 16% 34%;
+
+    --state-calm: 160 64% 42%;
+    --state-focused: 187 86% 43%;
+    --state-restless: 38 92% 50%;
+    --state-overwhelmed: 0 84% 60%;
+    --state-mixed: 263 70% 58%;
+    --state-neutral: 215 16% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply backdrop-blur-md border rounded-xl;
+    background: hsl(var(--card) / 0.8);
+    border-color: hsl(var(--border));
+  }
+
+  .glass-elevated {
+    background: hsl(var(--card-elevated));
+    border-color: hsl(var(--border));
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .shimmer-hover:hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  @keyframes pulse-once {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+  }
+
+  .animate-pulse-once {
+    animation: pulse-once 0.6s ease-out 1;
+  }
+
+  @keyframes slide-in-result {
+    from { opacity: 0; transform: translateX(16px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-slide-in-result {
+    animation: slide-in-result 0.4s ease-out forwards;
+  }
+
+  @keyframes bar-fill {
+    from { width: 0%; }
+  }
+
+  .animate-bar-fill {
+    animation: bar-fill 0.6s ease-out forwards;
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
