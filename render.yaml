@@ -2,8 +2,6 @@ services:
   - type: web
     name: lumina-emotion-engine
     runtime: python
-    buildCommand: pip install -r requirements-render.txt
+    pythonVersion: "3.11.0"
+    buildCommand: pip install -r requirements-render.txt && python -m app.pipeline.train
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
