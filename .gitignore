@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Conda / venv
+env/
+venv/
+.env
+*.env
+
+# Artifacts (large model files — don't push to GitHub)
+artifacts/
+
+# Data (optional — uncomment if you don't want data on GitHub)
+# data/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

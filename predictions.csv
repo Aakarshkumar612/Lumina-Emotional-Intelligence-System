@@ -1,0 +1,121 @@
+id,predicted_state,predicted_intensity,confidence,uncertain_flag,what_to_do,when_to_do,supportive_message
+10001,focused,3,0.6503,0,light_planning,tonight,You're feeling moderately focused. A bit of light planning tonight will give you a gentle sense of direction.
+10002,focused,1,0.3574,1,light_planning,later_today,You're feeling mildly focused. A bit of light planning later today will give you a gentle sense of direction.
+10003,mixed,3,0.4714,1,journaling,tonight,You appear moderately mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10004,calm,1,0.4008,1,light_planning,later_today,You're feeling mildly calm. A bit of light planning later today will give you a gentle sense of direction.
+10005,neutral,2,0.3632,1,rest,later_today,Your mind seems slightly neutral. Prioritize rest later today — recovery is productive.
+10006,mixed,2,0.3601,1,journaling,within_15_min,You appear slightly mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10007,restless,4,0.5323,0,movement,now,You seem quite restless. Light movement now will help shift and release that energy.
+10008,overwhelmed,3,0.3537,1,grounding,within_15_min,You seem moderately overwhelmed. A short grounding exercise within 15 min will help you reconnect with the present moment.
+10009,restless,3,0.485,1,movement,tonight,You seem moderately restless. Light movement tonight will help shift and release that energy.
+10010,overwhelmed,2,0.5359,1,grounding,tomorrow_morning,You seem slightly overwhelmed. A short grounding exercise tomorrow morning will help you reconnect with the present moment.
+10011,overwhelmed,4,0.7051,0,grounding,now,You seem quite overwhelmed. A short grounding exercise now will help you reconnect with the present moment.
+10012,restless,2,0.5114,1,movement,later_today,You seem slightly restless. Light movement later today will help shift and release that energy.
+10013,mixed,1,0.6605,0,journaling,later_today,You appear mildly mixed. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10014,focused,1,0.4036,1,light_planning,later_today,You're feeling mildly focused. A bit of light planning later today will give you a gentle sense of direction.
+10015,calm,3,0.4721,1,journaling,within_15_min,You appear moderately calm. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10016,neutral,2,0.4383,1,light_planning,tonight,You're feeling slightly neutral. A bit of light planning tonight will give you a gentle sense of direction.
+10017,mixed,2,0.6276,1,journaling,within_15_min,You appear slightly mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10018,mixed,3,0.4542,1,journaling,tonight,You appear moderately mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10019,neutral,2,0.3115,1,light_planning,later_today,You're feeling slightly neutral. A bit of light planning later today will give you a gentle sense of direction.
+10020,mixed,4,0.768,0,journaling,now,You appear quite mixed. Writing your thoughts now can bring clarity and release what's weighing on you.
+10021,overwhelmed,3,0.5651,1,grounding,tonight,You seem moderately overwhelmed. A short grounding exercise tonight will help you reconnect with the present moment.
+10022,calm,1,0.5439,1,journaling,later_today,You appear mildly calm. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10023,neutral,2,0.3396,1,rest,tomorrow_morning,Your mind seems slightly neutral. Prioritize rest tomorrow morning — recovery is productive.
+10024,neutral,2,0.4596,1,rest,tonight,Your mind seems slightly neutral. Prioritize rest tonight — recovery is productive.
+10025,restless,5,0.3823,1,movement,now,You seem very restless. Light movement now will help shift and release that energy.
+10026,focused,1,0.349,1,light_planning,later_today,You're feeling mildly focused. A bit of light planning later today will give you a gentle sense of direction.
+10027,mixed,2,0.367,1,journaling,tonight,You appear slightly mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10028,mixed,2,0.3539,1,journaling,later_today,You appear slightly mixed. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10029,overwhelmed,3,0.5712,1,grounding,within_15_min,You seem moderately overwhelmed. A short grounding exercise within 15 min will help you reconnect with the present moment.
+10030,mixed,1,0.6321,0,journaling,tomorrow_morning,You appear mildly mixed. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10031,focused,3,0.7771,0,light_planning,within_15_min,You're feeling moderately focused. A bit of light planning within 15 min will give you a gentle sense of direction.
+10032,restless,3,0.3556,1,movement,tonight,You seem moderately restless. Light movement tonight will help shift and release that energy.
+10033,overwhelmed,3,0.5423,1,grounding,within_15_min,You seem moderately overwhelmed. A short grounding exercise within 15 min will help you reconnect with the present moment.
+10034,neutral,2,0.4828,1,rest,tomorrow_morning,Your mind seems slightly neutral. Prioritize rest tomorrow morning — recovery is productive.
+10035,focused,4,0.6529,0,deep_work,now,You're feeling quite focused — a great state for focused work. Channel this now.
+10036,neutral,2,0.4469,1,rest,within_15_min,Your mind seems slightly neutral. Prioritize rest within 15 min — recovery is productive.
+10037,focused,1,0.4466,1,light_planning,later_today,You're feeling mildly focused. A bit of light planning later today will give you a gentle sense of direction.
+10038,mixed,2,0.325,1,journaling,tomorrow_morning,You appear slightly mixed. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10039,focused,1,0.3046,1,light_planning,tonight,You're feeling mildly focused. A bit of light planning tonight will give you a gentle sense of direction.
+10040,mixed,2,0.5797,1,journaling,tonight,You appear slightly mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10041,overwhelmed,4,0.7172,0,grounding,now,You seem quite overwhelmed. A short grounding exercise now will help you reconnect with the present moment.
+10042,calm,1,0.459,1,light_planning,later_today,You're feeling mildly calm. A bit of light planning later today will give you a gentle sense of direction.
+10043,restless,1,0.535,0,movement,tomorrow_morning,You seem mildly restless. Light movement tomorrow morning will help shift and release that energy.
+10044,calm,1,0.6522,0,journaling,tonight,You appear mildly calm. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10045,restless,2,0.5853,1,movement,within_15_min,You seem slightly restless. Light movement within 15 min will help shift and release that energy.
+10046,neutral,2,0.4116,1,light_planning,tomorrow_morning,You're feeling slightly neutral. A bit of light planning tomorrow morning will give you a gentle sense of direction.
+10047,focused,1,0.6819,1,deep_work,later_today,You're feeling mildly focused — a great state for focused work. Channel this later today.
+10048,mixed,2,0.3377,1,journaling,later_today,You appear slightly mixed. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10049,overwhelmed,2,0.3145,1,grounding,tomorrow_morning,You seem slightly overwhelmed. A short grounding exercise tomorrow morning will help you reconnect with the present moment.
+10050,restless,3,0.539,1,movement,tonight,You seem moderately restless. Light movement tonight will help shift and release that energy.
+10051,calm,1,0.3105,1,journaling,later_today,You appear mildly calm. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10052,restless,5,0.3705,1,movement,now,You seem very restless. Light movement now will help shift and release that energy.
+10053,calm,1,0.4363,1,light_planning,later_today,You're feeling mildly calm. A bit of light planning later today will give you a gentle sense of direction.
+10054,overwhelmed,2,0.5677,1,grounding,later_today,You seem slightly overwhelmed. A short grounding exercise later today will help you reconnect with the present moment.
+10055,mixed,2,0.6618,1,journaling,tomorrow_morning,You appear slightly mixed. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10056,neutral,2,0.4028,1,light_planning,tomorrow_morning,You're feeling slightly neutral. A bit of light planning tomorrow morning will give you a gentle sense of direction.
+10057,overwhelmed,2,0.5847,1,grounding,later_today,You seem slightly overwhelmed. A short grounding exercise later today will help you reconnect with the present moment.
+10058,overwhelmed,2,0.4482,1,grounding,later_today,You seem slightly overwhelmed. A short grounding exercise later today will help you reconnect with the present moment.
+10059,mixed,3,0.6432,0,journaling,tonight,You appear moderately mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10060,mixed,2,0.5237,0,journaling,tomorrow_morning,You appear slightly mixed. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10061,neutral,5,0.5676,0,light_planning,now,You're feeling very neutral. A bit of light planning now will give you a gentle sense of direction.
+10062,mixed,3,0.3254,1,journaling,tonight,You appear moderately mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10063,restless,2,0.6072,1,movement,later_today,You seem slightly restless. Light movement later today will help shift and release that energy.
+10064,mixed,2,0.3516,1,journaling,within_15_min,You appear slightly mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10065,neutral,5,0.7123,0,light_planning,now,You're feeling very neutral. A bit of light planning now will give you a gentle sense of direction.
+10066,mixed,2,0.3206,1,journaling,tonight,You appear slightly mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10067,restless,2,0.524,1,movement,tomorrow_morning,You seem slightly restless. Light movement tomorrow morning will help shift and release that energy.
+10068,overwhelmed,5,0.6807,0,grounding,now,You seem very overwhelmed. A short grounding exercise now will help you reconnect with the present moment.
+10069,neutral,2,0.539,1,light_planning,tonight,You're feeling slightly neutral. A bit of light planning tonight will give you a gentle sense of direction.
+10070,neutral,2,0.509,1,rest,tonight,Your mind seems slightly neutral. Prioritize rest tonight — recovery is productive.
+10071,mixed,3,0.3669,1,journaling,within_15_min,You appear moderately mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10072,neutral,1,0.4491,1,light_planning,later_today,You're feeling mildly neutral. A bit of light planning later today will give you a gentle sense of direction.
+10073,focused,1,0.3041,1,light_planning,tomorrow_morning,You're feeling mildly focused. A bit of light planning tomorrow morning will give you a gentle sense of direction.
+10074,mixed,3,0.4376,1,journaling,within_15_min,You appear moderately mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10075,restless,3,0.4355,1,movement,within_15_min,You seem moderately restless. Light movement within 15 min will help shift and release that energy.
+10076,mixed,3,0.5125,1,journaling,within_15_min,You appear moderately mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10077,neutral,4,0.5869,0,rest,within_15_min,Your mind seems quite neutral. Prioritize rest within 15 min — recovery is productive.
+10078,restless,2,0.5821,1,movement,later_today,You seem slightly restless. Light movement later today will help shift and release that energy.
+10079,restless,2,0.4734,1,movement,tonight,You seem slightly restless. Light movement tonight will help shift and release that energy.
+10080,focused,4,0.7487,0,deep_work,tonight,You're feeling quite focused — a great state for focused work. Channel this tonight.
+10081,restless,3,0.4639,1,movement,tonight,You seem moderately restless. Light movement tonight will help shift and release that energy.
+10082,mixed,2,0.7723,0,journaling,later_today,You appear slightly mixed. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10083,neutral,4,0.4374,1,light_planning,within_15_min,You're feeling quite neutral. A bit of light planning within 15 min will give you a gentle sense of direction.
+10084,overwhelmed,3,0.6028,1,grounding,within_15_min,You seem moderately overwhelmed. A short grounding exercise within 15 min will help you reconnect with the present moment.
+10085,calm,1,0.7206,0,light_planning,tonight,You're feeling mildly calm. A bit of light planning tonight will give you a gentle sense of direction.
+10086,neutral,2,0.5718,1,rest,tonight,Your mind seems slightly neutral. Prioritize rest tonight — recovery is productive.
+10087,mixed,2,0.4208,1,journaling,tomorrow_morning,You appear slightly mixed. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10088,neutral,2,0.5488,1,light_planning,within_15_min,You're feeling slightly neutral. A bit of light planning within 15 min will give you a gentle sense of direction.
+10089,neutral,3,0.5119,1,rest,tonight,Your mind seems moderately neutral. Prioritize rest tonight — recovery is productive.
+10090,neutral,5,0.7469,0,light_planning,now,You're feeling very neutral. A bit of light planning now will give you a gentle sense of direction.
+10091,neutral,5,0.6776,0,light_planning,now,You're feeling very neutral. A bit of light planning now will give you a gentle sense of direction.
+10092,overwhelmed,2,0.3642,1,grounding,later_today,You seem slightly overwhelmed. A short grounding exercise later today will help you reconnect with the present moment.
+10093,mixed,2,0.5381,1,journaling,tonight,You appear slightly mixed. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10094,focused,4,0.7204,0,light_planning,now,You're feeling quite focused. A bit of light planning now will give you a gentle sense of direction.
+10095,mixed,2,0.4521,1,journaling,tomorrow_morning,You appear slightly mixed. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10096,calm,4,0.5738,0,light_planning,within_15_min,You're feeling quite calm. A bit of light planning within 15 min will give you a gentle sense of direction.
+10097,neutral,2,0.418,1,light_planning,tonight,You're feeling slightly neutral. A bit of light planning tonight will give you a gentle sense of direction.
+10098,overwhelmed,3,0.5957,1,grounding,tonight,You seem moderately overwhelmed. A short grounding exercise tonight will help you reconnect with the present moment.
+10099,restless,3,0.4916,1,movement,within_15_min,You seem moderately restless. Light movement within 15 min will help shift and release that energy.
+10100,mixed,3,0.3994,1,journaling,within_15_min,You appear moderately mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10101,restless,2,0.315,1,movement,tonight,You seem slightly restless. Light movement tonight will help shift and release that energy.
+10102,overwhelmed,2,0.4429,1,grounding,tonight,You seem slightly overwhelmed. A short grounding exercise tonight will help you reconnect with the present moment.
+10103,calm,4,0.4633,1,light_planning,within_15_min,You're feeling quite calm. A bit of light planning within 15 min will give you a gentle sense of direction.
+10104,mixed,4,0.4327,1,journaling,now,You appear quite mixed. Writing your thoughts now can bring clarity and release what's weighing on you.
+10105,focused,5,0.53,1,light_planning,now,You're feeling very focused. A bit of light planning now will give you a gentle sense of direction.
+10106,neutral,2,0.491,1,light_planning,later_today,You're feeling slightly neutral. A bit of light planning later today will give you a gentle sense of direction.
+10107,overwhelmed,4,0.5255,0,grounding,now,You seem quite overwhelmed. A short grounding exercise now will help you reconnect with the present moment.
+10108,neutral,2,0.5005,1,rest,within_15_min,Your mind seems slightly neutral. Prioritize rest within 15 min — recovery is productive.
+10109,neutral,2,0.4821,1,light_planning,later_today,You're feeling slightly neutral. A bit of light planning later today will give you a gentle sense of direction.
+10110,calm,1,0.3285,1,light_planning,tomorrow_morning,You're feeling mildly calm. A bit of light planning tomorrow morning will give you a gentle sense of direction.
+10111,mixed,2,0.6235,1,journaling,within_15_min,You appear slightly mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10112,mixed,2,0.3741,1,journaling,later_today,You appear slightly mixed. Writing your thoughts later today can bring clarity and release what's weighing on you.
+10113,calm,1,0.554,1,light_planning,later_today,You're feeling mildly calm. A bit of light planning later today will give you a gentle sense of direction.
+10114,mixed,3,0.2633,1,journaling,within_15_min,You appear moderately mixed. Writing your thoughts within 15 min can bring clarity and release what's weighing on you.
+10115,calm,3,0.5945,0,journaling,tonight,You appear moderately calm. Writing your thoughts tonight can bring clarity and release what's weighing on you.
+10116,overwhelmed,3,0.6571,0,grounding,tonight,You seem moderately overwhelmed. A short grounding exercise tonight will help you reconnect with the present moment.
+10117,neutral,5,0.4577,1,rest,now,Your mind seems very neutral. Prioritize rest now — recovery is productive.
+10118,focused,1,0.3248,1,deep_work,later_today,You're feeling mildly focused — a great state for focused work. Channel this later today.
+10119,calm,1,0.3523,1,journaling,tomorrow_morning,You appear mildly calm. Writing your thoughts tomorrow morning can bring clarity and release what's weighing on you.
+10120,restless,3,0.3387,1,movement,within_15_min,You seem moderately restless. Light movement within 15 min will help shift and release that energy.
