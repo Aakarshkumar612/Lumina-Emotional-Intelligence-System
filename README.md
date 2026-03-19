@@ -1,48 +1,66 @@
-# Lumina — Emotional Intelligence System 🌿
+# ✦ Lumina — Emotional Intelligence System
 
-> AI system that understands human emotional state, reasons under uncertainty,
-> and guides users toward a better mental state.
-> Built for ArvyaX Machine Learning Internship Assignment · RevoltronX
+<div align="center">
+
+![Lumina Banner](https://img.shields.io/badge/Lumina-Emotional%20Intelligence%20System-7C3AED?style=for-the-badge&logoColor=white)
+
+**AI system that understands human emotional state, reasons under uncertainty,**
+**and guides users toward a better mental state.**
+
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Lumina-06B6D4?style=for-the-badge)](https://lumina-frontend-rhzf.onrender.com)
+[![API Docs](https://img.shields.io/badge/📡%20API%20Docs-Swagger%20UI-10B981?style=for-the-badge)](https://lumina-emotional-intelligence-system.onrender.com/docs)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Aakarshkumar612/Lumina-Emotional-Intelligence-System)
+
+*Built for ArvyaX Machine Learning Internship Assignment · RevoltronX*
+
+</div>
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Links
 
 | Service | URL |
 |---|---|
-| Backend API | `https://lumina-emotion-engine.onrender.com` |
-| API Docs (Swagger) | `https://lumina-emotion-engine.onrender.com/docs` |
-| Frontend | Deployed via Lovable.dev |
+| 🎨 **Frontend UI** | https://lumina-frontend-rhzf.onrender.com |
+| 📡 **Backend API** | https://lumina-emotional-intelligence-system.onrender.com |
+| 📖 **API Swagger Docs** | https://lumina-emotional-intelligence-system.onrender.com/docs |
+
+> ⚠️ **Note:** Hosted on Render free tier. First load may take ~50 seconds to wake up. Subsequent requests are fast.
 
 ---
 
 ## 🧠 Philosophy
 
 > *AI should not just understand humans. It should help them move toward a better state.*
+> — Team ArvyaX
 
 Lumina is built around three pillars:
 
-- **Understand** — Predict emotional state from noisy journal text + contextual signals
-- **Decide** — Recommend what action to take and when, using a rule-based decision engine
-- **Guide** — Generate supportive, human-like messages to help users move forward
+| Pillar | What It Does |
+|---|---|
+| 🔍 **Understand** | Predicts emotional state from noisy journal text + contextual signals |
+| ⚡ **Decide** | Recommends what action to take and exactly when to take it |
+| 💚 **Guide** | Generates supportive human-like messages to move users forward |
 
 ---
 
-## 🗺️ Architecture
+## 🗺️ System Architecture
 
 ```
-Journal Text ──► Sentence-BERT (all-MiniLM-L6-v2, local) ──► 384-dim embeddings ─┐
-                                                                                    ├──► XGBoost ──► emotional_state
-Sleep / Stress / Energy / Time / Mood ──► Scaled metadata (9-dim) ─────────────────┘         │
-                                                                                               ▼
-                                                                           Hybrid Decision Engine
-                                                                           (what_to_do + when_to_do)
-                                                                                               │
-                                                                                               ▼
-                                                                           Confidence Score + Uncertain Flag
-                                                                                               │
-                                                                                               ▼
-                                                                           Supportive Message Generator
+Journal Text ──► Sentence-BERT (all-MiniLM-L6-v2) ──► 384-dim embeddings ─┐
+                       [runs locally, no API needed]                        │
+                                                                             ├──► XGBoost ──► emotional_state
+Sleep / Stress / Energy / Time / Mood ──► Scaled metadata (9-dim) ─────────┘         │
+                                                                                       ▼
+                                                                         Hybrid Decision Engine
+                                                                         (what_to_do + when_to_do)
+                                                                                       │
+                                                                                       ▼
+                                                                         Confidence Score
+                                                                         + Uncertain Flag
+                                                                                       │
+                                                                                       ▼
+                                                                         Supportive Message
 ```
 
 ---
@@ -51,67 +69,70 @@ Sleep / Stress / Energy / Time / Mood ──► Scaled metadata (9-dim) ──�
 
 ```
 Lumina-Emotional-Intelligence-System/
-├── app/
-│   ├── main.py                        ← FastAPI app entry point
+│
+├── 📂 app/                          ← FastAPI Backend
+│   ├── main.py                      ← App entry point + CORS
 │   ├── routers/
-│   │   ├── predict.py                 ← /predict and /predict/batch endpoints
-│   │   └── health.py                  ← /health endpoint
+│   │   ├── predict.py               ← POST /predict, POST /predict/batch
+│   │   └── health.py                ← GET /health
 │   ├── pipeline/
-│   │   ├── train.py                   ← End-to-end training pipeline
-│   │   ├── predict_engine.py          ← Inference engine (singleton)
-│   │   └── decision_engine.py         ← What + When decision logic
+│   │   ├── train.py                 ← End-to-end training pipeline
+│   │   ├── predict_engine.py        ← Inference singleton
+│   │   └── decision_engine.py       ← What + When rule engine
 │   └── utils/
-│       ├── features.py                ← Feature engineering + embeddings
-│       └── uncertainty.py             ← Confidence + uncertain flag logic
-├── artifacts/                         ← Saved trained models
+│       ├── features.py              ← Sentence-BERT + feature engineering
+│       └── uncertainty.py           ← Confidence + uncertain flag
+│
+├── 📂 frontend/                     ← React + Tailwind UI
+│   ├── src/
+│   │   ├── api/emotionApi.ts        ← API integration layer
+│   │   ├── components/lumina/       ← Core UI components
+│   │   │   ├── NewSession.tsx       ← Journal form + result card
+│   │   │   ├── History.tsx          ← Session history + charts
+│   │   │   ├── Sidebar.tsx          ← Navigation
+│   │   │   └── About.tsx            ← About page
+│   │   └── pages/Index.tsx          ← Main router
+│   └── package.json
+│
+├── 📂 artifacts/                    ← Trained models (auto-generated)
 │   ├── state_classifier.pkl
 │   ├── intensity_regressor.pkl
 │   ├── state_label_encoder.pkl
-│   ├── feature_engineer.pkl
-│   └── training_meta.pkl
-├── data/
-│   ├── train.csv                      ← 1200 training samples
-│   └── test.csv                       ← 120 test samples
-├── frontend/                          ← React + Tailwind UI (via Lovable.dev)
-│   ├── src/
-│   │   ├── api/emotionApi.ts          ← API integration layer
-│   │   ├── components/lumina/         ← Core UI components
-│   │   │   ├── NewSession.tsx         ← Journal input + form
-│   │   │   ├── ResultCard.tsx         ← Prediction result display
-│   │   │   ├── History.tsx            ← Session history + charts
-│   │   │   ├── Sidebar.tsx            ← Navigation sidebar
-│   │   │   └── About.tsx              ← About page
-│   │   └── pages/Index.tsx            ← Main page router
-│   ├── package.json
-│   └── vite.config.ts
-├── notebooks/                         ← EDA notebooks
-├── generate_predictions.py            ← Generates predictions.csv
-├── predictions.csv                    ← Final output (120 predictions)
-├── render.yaml                        ← Render deployment config
-├── requirements-render.txt            ← Production dependencies
-├── requirements.txt                   ← Local development dependencies
-├── README.md
-├── ERROR_ANALYSIS.md
-└── EDGE_PLAN.md
+│   └── feature_engineer.pkl
+│
+├── 📂 data/
+│   ├── train.csv                    ← 1200 training samples
+│   └── test.csv                     ← 120 test samples
+│
+├── 📂 notebooks/
+│   └── eda_analysis.ipynb           ← Full EDA with visualizations
+│
+├── 📄 predictions.csv               ← Final predictions (120 rows)
+├── 📄 README.md
+├── 📄 ERROR_ANALYSIS.md             ← 10 failure case analyses
+├── 📄 EDGE_PLAN.md                  ← Mobile/on-device deployment plan
+├── 📄 render.yaml                   ← Render deployment config
+├── 📄 requirements.txt              ← Local dependencies
+└── 📄 requirements-render.txt       ← Production dependencies
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Local Setup
 
 ### Prerequisites
-- Anaconda or Miniconda installed
+- Anaconda / Miniconda
 - Python 3.12
-- Node.js 18+ (for frontend)
+- Node.js 18+
 - Git
 
-### 1. Clone the repository
+### 1. Clone the repo
 ```bash
 git clone https://github.com/Aakarshkumar612/Lumina-Emotional-Intelligence-System.git
 cd Lumina-Emotional-Intelligence-System
 ```
 
-### 2. Create and activate conda environment
+### 2. Create conda environment
 ```bash
 conda create -n arvyax python=3.12 -y
 conda activate arvyax
@@ -122,67 +143,48 @@ conda activate arvyax
 pip install -r requirements.txt
 ```
 
-### 4. Add data files
-Place `train.csv` and `test.csv` inside the `data/` folder.
-
-### 5. Train the models
+### 4. Train the models
 ```bash
 python -m app.pipeline.train
 ```
 
-This will:
-- Download `all-MiniLM-L6-v2` (~90MB, first run only, cached after)
-- Generate Sentence-BERT embeddings for all journal texts
-- Train emotional state XGBoost classifier (with SMOTE balancing)
-- Train intensity XGBoost classifier (with hybrid rule-based fallback)
-- Run ablation study (text-only vs text+metadata)
-- Save all artifacts to `artifacts/`
+- Downloads `all-MiniLM-L6-v2` (~90MB, first run only, cached after)
+- Trains emotional state + intensity classifiers
+- Runs ablation study
+- Saves all artifacts to `artifacts/`
 
-Expected output:
-```
-✅ Training complete!
-Validation Accuracy: 0.5667
-```
-
-### 6. Generate predictions
+### 5. Generate predictions
 ```bash
 python generate_predictions.py
 ```
-Output: `predictions.csv` (120 rows)
 
-### 7. Run the FastAPI backend
+### 6. Run the API
 ```bash
 uvicorn app.main:app --reload --port 8000
 ```
-- API: http://localhost:8000
-- Swagger Docs: http://localhost:8000/docs
-- Health Check: http://localhost:8000/health
 
-### 8. Run the Frontend
+→ API: http://localhost:8000
+→ Docs: http://localhost:8000/docs
+
+### 7. Run the Frontend
 ```bash
 cd frontend
-npm install
+npm install --legacy-peer-deps
 npm run dev
 ```
-Frontend: http://localhost:5173
+
+→ UI: http://localhost:8080
 
 ---
 
-## 🔌 API Endpoints
+## 📡 API Reference
 
-### GET `/`
-System status.
+### `POST /predict`
 
-### GET `/health`
-Returns model status, loaded classes, training metadata, ablation results.
-
-### POST `/predict`
-Single prediction endpoint.
-
-**Request Body:**
+**Request:**
 ```json
 {
-  "journal_text": "I feel scattered and cant focus at all today",
+  "journal_text": "I feel scattered and overwhelmed today",
   "ambience_type": "forest",
   "duration_min": 20,
   "sleep_hours": 5.5,
@@ -190,202 +192,105 @@ Single prediction endpoint.
   "stress_level": 8,
   "time_of_day": "morning",
   "previous_day_mood": "restless",
-  "face_emotion_hint": "tired_face",
-  "reflection_quality": "clear"
+  "face_emotion_hint": "tired_face"
 }
 ```
 
 **Response:**
 ```json
 {
-  "predicted_state": "restless",
-  "predicted_intensity": 5,
-  "confidence": 0.3453,
-  "uncertain_flag": 1,
+  "predicted_state": "overwhelmed",
+  "predicted_intensity": 4,
+  "confidence": 0.52,
+  "uncertain_flag": 0,
   "what_to_do": "box_breathing",
   "when_to_do": "now",
-  "supportive_message": "You seem very restless right now. Let's slow things down — try a short breathing exercise now to reset your system.",
-  "state_confidence": 0.342,
-  "intensity_confidence": 0.3487
+  "supportive_message": "You seem quite overwhelmed right now. Let's slow things down — try a short breathing exercise now to reset your system.",
+  "state_confidence": 0.54,
+  "intensity_confidence": 0.49
 }
 ```
 
-### POST `/predict/batch`
+### `POST /predict/batch`
 Batch predictions for multiple records.
 
-**Request Body:**
-```json
-{
-  "records": [
-    { "journal_text": "...", "stress_level": 7, ... },
-    { "journal_text": "...", "stress_level": 3, ... }
-  ]
-}
-```
+### `GET /health`
+System health check — model status, classes, ablation results.
 
 ---
 
 ## 🧪 Model Details
 
 ### Dataset
-- **Train:** 1200 samples
-- **Test:** 120 samples
-- **Features:** journal_text, ambience_type, duration_min, sleep_hours, energy_level, stress_level, time_of_day, previous_day_mood, face_emotion_hint, reflection_quality
-- **Targets:** emotional_state (6 classes), intensity (1-5)
-- **Missing data:** face_emotion_hint (10.25%), previous_day_mood (1.25%), sleep_hours (0.58%)
+| Property | Value |
+|---|---|
+| Train samples | 1200 |
+| Test samples | 120 |
+| Target 1 | emotional_state (6 classes) |
+| Target 2 | intensity (1–5) |
+| Missing data | face_emotion_hint (10.25%), previous_day_mood (1.25%) |
 
-### Part 1 — Emotional State Prediction
+### Emotional State Classifier
 | Property | Value |
 |---|---|
 | Model | XGBoost Classifier |
-| Text Encoder | Sentence-BERT (all-MiniLM-L6-v2) |
-| Feature Dimensions | 393 (384 text + 9 metadata) |
+| Text Encoder | Sentence-BERT (all-MiniLM-L6-v2, local) |
+| Feature Dims | 393 (384 text + 9 metadata) |
 | Classes | calm, focused, mixed, neutral, overwhelmed, restless |
-| Validation Accuracy | 56.7% |
-| Random Baseline | 16.7% (6 classes) |
-| Class Balancing | SMOTE oversampling |
+| Val Accuracy | 56.7% (random baseline = 16.7%) |
+| Balancing | SMOTE oversampling |
 
-### Part 2 — Intensity Prediction
+### Intensity Estimator
 | Property | Value |
 |---|---|
 | Approach | Hybrid (ML + rule-based fallback) |
-| Model | XGBoost Classifier (labels 1-5) |
-| Fallback | Rule-based using stress + energy signals |
-| Fallback Trigger | When ML confidence < 0.45 |
-| Why Hybrid | Intensity labels are noisy — near-random ML accuracy (~23%) is expected for subjective labels. Rule-based fallback provides more reliable estimates for extreme cases. |
+| Fallback trigger | ML confidence < 0.45 |
+| Why hybrid | Noisy intensity labels (~23% ML accuracy expected) |
 
-**Intensity is treated as classification** (discrete 1–5 labels) evaluated with both accuracy and MAE metrics.
+### Decision Engine
 
-### Part 3 — Decision Engine
+Rule-based engine using state + intensity + stress + energy + time:
 
-Rule-based engine combining predicted state + intensity + stress + energy + time_of_day:
+| State | High Stress | Low Energy | Default |
+|---|---|---|---|
+| calm | — | light_planning | journaling |
+| focused | — | light_planning | deep_work |
+| mixed | box_breathing | journaling | journaling |
+| neutral | — | rest | light_planning |
+| overwhelmed | box_breathing | grounding | grounding |
+| restless | box_breathing | movement | movement |
 
-**What to do:**
+### Uncertainty Modeling
+- **Confidence** = average of state + intensity max class probability
+- **Uncertain flag** = 1 if confidence < 0.50
+- 77.5% of test predictions flagged uncertain — honest behavior for a noisy 6-class problem
 
-| State | High Stress (≥7) | Low Energy (≤3) | High Energy (≥7) | Default |
-|---|---|---|---|---|
-| calm | — | light_planning | deep_work | journaling |
-| focused | — | light_planning | deep_work | deep_work |
-| mixed | box_breathing | journaling | — | journaling |
-| neutral | — | rest | deep_work | light_planning |
-| overwhelmed | box_breathing | grounding | — | grounding |
-| restless | box_breathing | movement | — | movement |
-
-**When to do it:**
-
-| Time of Day | Intensity 5 | Intensity 4 | Intensity 3 | Intensity 2 | Intensity 1 |
-|---|---|---|---|---|---|
-| morning | now | now | within_15_min | within_15_min | later_today |
-| afternoon | now | within_15_min | within_15_min | later_today | later_today |
-| evening | now | within_15_min | tonight | tonight | tonight |
-| night | now | tonight | tonight | tomorrow_morning | tomorrow_morning |
-
-Urgent states (overwhelmed, restless, mixed) with intensity ≥ 4 → always "now"
-
-### Part 4 — Uncertainty Modeling
-- **State confidence:** max class probability from XGBoost softmax output
-- **Intensity confidence:** max class probability from intensity classifier
-- **Overall confidence:** average of both scores
-- **Uncertain flag:** 1 if overall confidence < 0.50, else 0
-- **Result:** 77.5% of test predictions flagged as uncertain — this is expected and honest for a noisy 6-class problem
-
-### Part 5 — Feature Importance
-- **Text embeddings** (Sentence-BERT, 384 dims) contribute the dominant signal for emotional state detection — they capture semantic nuance in journal text
-- **stress_level** and **energy_level** are the most important metadata features — directly drive both intensity estimation and decision engine
-- **sleep_hours** is highly informative for overwhelmed/tired states
-- **face_emotion_hint** provides valuable signal but has 10% missing data
-- **time_of_day** is critical for the "when" decision — not for state prediction
-- **ambience_type** has weaker signal than expected — users adapt differently to the same ambience
-
-### Part 6 — Ablation Study
-
-| Model | CV Accuracy | Std Dev |
-|---|---|---|
-| Text Only (BERT embeddings) | 44.92% | ±15.67% |
-| Text + Metadata | 42.75% | ±15.40% |
-
-**Key Insight:** Text-only marginally outperforms text+metadata in cross-validation. This suggests metadata adds some noise to the classification task. However, metadata is essential for the decision engine (what/when recommendations) and intensity estimation — it cannot be removed from the full system.
-
----
-
-## 🤖 Frontend — Lumina UI
-
-Built with React + TypeScript + Tailwind CSS via Lovable.dev.
-
-### Pages
-1. **New Session** — Journal input form + live prediction result card
-2. **History** — Past sessions with emotion distribution donut chart + intensity bar chart
-3. **About** — System explanation + tech stack
-
-### Key Features
-- Dark premium UI with violet/cyan accent colors
-- Glassmorphism cards with glow effects
-- Animated result card (fade + slide)
-- Confidence meter with color-coded progress bar
-- Emotion state badges with unique colors per state
-- Session history persisted in localStorage
-- Fully responsive (mobile bottom nav, tablet collapsed sidebar, desktop full sidebar)
-- Error handling with retry on API failure
-
-### Connect Frontend to Backend
-Create `frontend/.env`:
-```
-VITE_API_URL=https://your-render-url.onrender.com
-```
-
-For local development:
-```
-VITE_API_URL=http://localhost:8000
-```
-
----
-
-## 🚀 Deployment
-
-### Backend — Render
-
-1. Push code to GitHub
-2. Go to render.com → New Web Service
-3. Connect `Aakarshkumar612/Lumina-Emotional-Intelligence-System`
-4. Settings:
-   - **Build Command:** `pip install -r requirements-render.txt`
-   - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-   - **Python Version:** 3.11
-
-### Frontend — Lovable / Vercel
-
-Option A — Lovable built-in deploy (one click)
-Option B — `cd frontend && npm run build` → deploy `dist/` to Vercel/Netlify
+### Ablation Study
+| Model | CV Accuracy |
+|---|---|
+| Text Only (BERT) | 44.9% ± 15.7% |
+| Text + Metadata | 42.7% ± 15.4% |
 
 ---
 
 ## 🔧 Robustness
 
-### Very short text ("ok", "fine")
-Sentence-BERT still produces a valid 384-dim embedding. The model falls back to metadata-driven prediction and sets `uncertain_flag = 1`. When text length < 5 words, confidence is automatically lower.
-
-### Missing values
-All missing values are handled at the feature engineering layer:
-- Numerical columns → median imputation
-- Categorical columns → most-frequent imputation
-- No hard failures — system always returns a prediction
-
-### Contradictory inputs
-When signals conflict (e.g., "I feel great" text + stress=9 + sleep=3):
-- State prediction relies on text embeddings (may predict calm)
-- Intensity hybrid engine overrides based on stress/energy signals
-- Decision engine uses rule-based logic on stress/energy → recommends appropriate action regardless of text sentiment
+| Scenario | How It's Handled |
+|---|---|
+| Very short text ("ok") | uncertain_flag=1, metadata-driven prediction |
+| Missing values | Median/mode imputation at feature layer |
+| Contradictory inputs | Rule-based engine overrides based on stress/energy |
+| Unknown emotional state | Falls back to light_planning recommendation |
 
 ---
 
-## 📊 predictions.csv Format
+## 🚀 Deployment
 
-```
-id, predicted_state, predicted_intensity, confidence, uncertain_flag, what_to_do, when_to_do, supportive_message
-10001, focused, 3, 0.6503, 0, light_planning, tonight, "You're feeling moderately focused..."
-10002, focused, 1, 0.3574, 1, light_planning, later_today, "You're feeling mildly focused..."
-...
-```
+| Layer | Platform | Status |
+|---|---|---|
+| Backend API | Render Web Service | ✅ Live |
+| Frontend UI | Render Static Site | ✅ Live |
+| ML Models | Retrained on Render at build time | ✅ |
 
 ---
 
@@ -395,26 +300,39 @@ id, predicted_state, predicted_intensity, confidence, uncertain_flag, what_to_do
 |---|---|
 | Language | Python 3.12 |
 | API Framework | FastAPI |
-| ML Models | XGBoost |
+| ML Model | XGBoost |
 | Text Embeddings | Sentence-BERT (all-MiniLM-L6-v2) |
 | Feature Engineering | Scikit-learn + SMOTE |
-| Serialization | Joblib |
-| Frontend | React + TypeScript + Tailwind CSS |
+| Frontend | React 18 + TypeScript |
+| Styling | Tailwind CSS + shadcn/ui |
 | Charts | Recharts |
-| Frontend Builder | Lovable.dev |
-| Deployment | Render (backend) |
+| Deployment | Render (backend + frontend) |
 | Version Control | Git + GitHub |
 
 ---
 
 ## 📝 Additional Documentation
 
-- [ERROR_ANALYSIS.md](./ERROR_ANALYSIS.md) — 10 failure case analyses with root causes and fixes
-- [EDGE_PLAN.md](./EDGE_PLAN.md) — Mobile/on-device deployment strategy
+| File | Description |
+|---|---|
+| [ERROR_ANALYSIS.md](./ERROR_ANALYSIS.md) | 10 failure cases with root causes and fix strategies |
+| [EDGE_PLAN.md](./EDGE_PLAN.md) | Mobile/on-device deployment strategy with ONNX + TF-IDF |
+| [notebooks/eda_analysis.ipynb](./notebooks/eda_analysis.ipynb) | Full EDA with 8 visualization charts |
 
 ---
 
 ## 👤 Author
 
+<div align="center">
+
 **Aakarsh Kumar**
-Artificial Intelligence Engineer
+
+Final Year B.Tech — Artificial Intelligence
+Gautam Buddha University
+
+[![GitHub](https://img.shields.io/badge/GitHub-Aakarshkumar612-181717?style=flat-square&logo=github)](https://github.com/Aakarshkumar612)
+
+
+**Dream > Innovate > Create ✦**
+
+</div>
