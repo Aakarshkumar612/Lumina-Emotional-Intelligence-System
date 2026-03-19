@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "https://lumina-emotional-intelligence-system.onrender.com";
 
 export interface EmotionPayload {
   journal_text: string;
